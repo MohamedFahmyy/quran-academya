@@ -1,0 +1,513 @@
+<!-- HERO SECTION -->
+<section id="home" class="hero-section py-5 py-lg-7 text-white position-relative overflow-hidden">
+  <div class="hero-bg-overlay"></div>
+  <div class="container position-relative z-2">
+    <div class="row align-items-center g-5">
+      <!-- Hero Copy -->
+      <div class="col-lg-6 text-center text-lg-start">
+        <div class="d-inline-flex align-items-center gap-2 badge-hero px-3 py-2 rounded-pill mb-4 border border-gold-subtle shadow-sm">
+          <i class="bi bi-patch-check-fill text-accent-gold"></i>
+          <span class="fw-bold fs-7 text-accent-gold-light"><%= t('hero.badge') %></span>
+        </div>
+
+        <h1 class="display-4 fw-black text-white lh-sm mb-4 hero-title">
+          <%= t('hero.headline') %>
+        </h1>
+
+        <p class="lead text-white-80 mb-5 fs-5 lh-base hero-desc">
+          <%= t('hero.description') %>
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start mb-5">
+          <a href="#download" class="btn btn-gold btn-lg px-4 py-3 fw-bold d-inline-flex align-items-center gap-2 shadow-lg hover-elevate">
+            <i class="bi bi-google-play fs-4"></i>
+            <span><%= t('hero.ctaDownload') %></span>
+          </a>
+          <a href="#features" class="btn btn-outline-light btn-lg px-4 py-3 fw-bold d-inline-flex align-items-center gap-2 hover-elevate">
+            <i class="bi bi-grid-fill"></i>
+            <span><%= t('hero.ctaFeatures') %></span>
+          </a>
+        </div>
+
+        <!-- Quick Stats Pill Grid -->
+        <div class="row g-3 stats-grid">
+          <div class="col-6 col-sm-3">
+            <div class="stat-pill p-3 rounded-3 text-center border border-white-10 bg-white-05">
+              <span class="d-block fw-black text-accent-gold fs-4">114</span>
+              <span class="fs-7 text-white-70"><%= t('hero.statsSurahs') %></span>
+            </div>
+          </div>
+          <div class="col-6 col-sm-3">
+            <div class="stat-pill p-3 rounded-3 text-center border border-white-10 bg-white-05">
+              <span class="d-block fw-black text-accent-gold fs-4">6,236</span>
+              <span class="fs-7 text-white-70"><%= t('hero.statsAyahs') %></span>
+            </div>
+          </div>
+          <div class="col-6 col-sm-3">
+            <div class="stat-pill p-3 rounded-3 text-center border border-white-10 bg-white-05">
+              <span class="d-block fw-black text-accent-gold fs-4">6</span>
+              <span class="fs-7 text-white-70"><%= t('hero.statsLanguages') %></span>
+            </div>
+          </div>
+          <div class="col-6 col-sm-3">
+            <div class="stat-pill p-3 rounded-3 text-center border border-white-10 bg-white-05">
+              <span class="d-block fw-black text-accent-gold fs-4">5</span>
+              <span class="fs-7 text-white-70"><%= t('hero.statsReciters') %></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Smartphone Mockup -->
+      <div class="col-lg-6 d-flex justify-content-center">
+        <div class="phone-mockup-wrapper">
+          <div class="phone-frame shadow-2xl">
+            <!-- Speaker & Camera Notch -->
+            <div class="phone-notch">
+              <div class="phone-camera"></div>
+              <div class="phone-speaker"></div>
+            </div>
+
+            <!-- Phone Screen Content (Home Screen) -->
+            <div class="phone-screen bg-app-surface text-dark font-app">
+              <!-- App Top Bar -->
+              <div class="app-header d-flex justify-content-between align-items-center px-3 py-2 bg-primary text-white">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="app-header-icon">
+                    <i class="bi bi-book-half text-accent-gold"></i>
+                  </div>
+                  <span class="fw-bold fs-7">Al Quran Academy</span>
+                </div>
+                <div class="d-flex gap-2 text-white-70 fs-7">
+                  <i class="bi bi-compass"></i>
+                  <i class="bi bi-translate"></i>
+                </div>
+              </div>
+
+              <!-- Prayer Hero Card in Mockup -->
+              <div class="app-prayer-card m-3 p-3 rounded-4 text-white shadow-sm position-relative overflow-hidden">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-white-15 text-white fs-8 rounded-pill px-2 py-1">
+                    <i class="bi bi-geo-alt-fill me-1"></i> <%= lang === 'ar' ? 'مكة المكرمة' : 'Makkah' %>
+                  </span>
+                  <span class="badge bg-gold-pill text-dark fs-8 fw-bold px-2 py-1">
+                    <i class="bi bi-compass me-1"></i> 136°
+                  </span>
+                </div>
+                <div class="text-center my-2">
+                  <span class="text-white-70 fs-8 d-block"><%= lang === 'ar' ? 'الصلاة القادمة' : 'Next Prayer' %></span>
+                  <h3 class="fw-extrabold text-accent-gold my-1"><%= lang === 'ar' ? 'صلاة المغرب' : 'Maghrib' %></h3>
+                  <div class="fs-8 text-white-90 fw-bold letter-spacing-1">01:42:15</div>
+                </div>
+                <div class="d-flex justify-content-between text-center pt-2 border-top border-white-15 fs-8">
+                  <div><span class="opacity-70 d-block fs-9"><%= lang === 'ar' ? 'الفجر' : 'Fajr' %></span><strong>05:04</strong></div>
+                  <div><span class="opacity-70 d-block fs-9"><%= lang === 'ar' ? 'الظهر' : 'Dhuhr' %></span><strong>11:58</strong></div>
+                  <div><span class="opacity-70 d-block fs-9"><%= lang === 'ar' ? 'العصر' : 'Asr' %></span><strong>15:15</strong></div>
+                  <div class="text-accent-gold">
+                    <span class="d-block fs-9 fw-bold"><%= lang === 'ar' ? 'المغرب' : 'Maghrib' %></span>
+                    <strong>17:42</strong>
+                  </div>
+                  <div><span class="opacity-70 d-block fs-9"><%= lang === 'ar' ? 'العشاء' : 'Isha' %></span><strong>19:12</strong></div>
+                </div>
+              </div>
+
+              <!-- Quick Launchers Grid -->
+              <div class="px-3 py-1">
+                <div class="row g-2 text-center">
+                  <div class="col-4">
+                    <div class="app-quick-btn p-2 rounded-3 bg-white shadow-2xs border">
+                      <div class="quick-icon-wrap bg-primary-10 text-primary mx-auto mb-1">
+                        <i class="bi bi-book"></i>
+                      </div>
+                      <span class="fs-8 fw-bold d-block"><%= lang === 'ar' ? 'المصحف' : 'Quran' %></span>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="app-quick-btn p-2 rounded-3 bg-white shadow-2xs border">
+                      <div class="quick-icon-wrap bg-primary-10 text-primary mx-auto mb-1">
+                        <i class="bi bi-moon-stars"></i>
+                      </div>
+                      <span class="fs-8 fw-bold d-block"><%= lang === 'ar' ? 'الأذكار' : 'Azkar' %></span>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="app-quick-btn p-2 rounded-3 bg-white shadow-2xs border">
+                      <div class="quick-icon-wrap bg-primary-10 text-primary mx-auto mb-1">
+                        <i class="bi bi-compass"></i>
+                      </div>
+                      <span class="fs-8 fw-bold d-block"><%= lang === 'ar' ? 'القبلة' : 'Qibla' %></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Daily Verse Card -->
+              <div class="m-3 p-3 bg-white rounded-4 shadow-sm border border-gold-subtle">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-ivory text-primary-deep fw-bold fs-8 border border-gold-20">
+                    <%= lang === 'ar' ? 'آية وتدبر' : 'Verse of the Day' %>
+                  </span>
+                  <span class="fs-8 text-muted">سورة البقرة: 186</span>
+                </div>
+                <p class="font-quran fs-7 text-center text-primary-deep my-2 lh-base">
+                  ﴿ وَإِذَا سَأَلَكَ عِبَادِي عَنِّي فَإِنِّي قَرِيبٌ ﴾
+                </p>
+                <div class="d-flex justify-content-end text-muted fs-8">
+                  <i class="bi bi-share me-2"></i>
+                  <i class="bi bi-bookmark"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section id="features" class="py-5 py-lg-7 bg-surface-alt">
+  <div class="container">
+    <div class="text-center max-w-700 mx-auto mb-5">
+      <span class="badge bg-primary-subtle text-primary border border-primary-20 px-3 py-2 rounded-pill fs-7 fw-bold mb-3">
+        <%= t('features.badge') %>
+      </span>
+      <h2 class="display-5 fw-extrabold text-primary-deep mb-3 section-title">
+        <%= t('features.title') %>
+      </h2>
+      <p class="text-muted fs-5 lh-base">
+        <%= t('features.subtitle') %>
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Feature 1: Complete Holy Quran -->
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card h-100 p-4 rounded-4 bg-white border border-light-subtle shadow-sm hover-elevate transition-all">
+          <div class="feature-icon-box bg-ivory text-primary rounded-3 mb-4 d-inline-flex align-items-center justify-content-center">
+            <i class="bi bi-journal-bookmark-fill fs-3 text-accent-gold"></i>
+          </div>
+          <h4 class="fw-bold text-primary-deep mb-3"><%= t('features.f1Title') %></h4>
+          <p class="text-muted fs-6 lh-base mb-0"><%= t('features.f1Desc') %></p>
+        </div>
+      </div>
+
+      <!-- Feature 2: Synchronized Recitation -->
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card h-100 p-4 rounded-4 bg-white border border-light-subtle shadow-sm hover-elevate transition-all">
+          <div class="feature-icon-box bg-ivory text-primary rounded-3 mb-4 d-inline-flex align-items-center justify-content-center">
+            <i class="bi bi-soundwave fs-3 text-accent-gold"></i>
+          </div>
+          <h4 class="fw-bold text-primary-deep mb-3"><%= t('features.f2Title') %></h4>
+          <p class="text-muted fs-6 lh-base mb-0"><%= t('features.f2Desc') %></p>
+        </div>
+      </div>
+
+      <!-- Feature 3: Prayer Times -->
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card h-100 p-4 rounded-4 bg-white border border-light-subtle shadow-sm hover-elevate transition-all">
+          <div class="feature-icon-box bg-ivory text-primary rounded-3 mb-4 d-inline-flex align-items-center justify-content-center">
+            <i class="bi bi-clock-history fs-3 text-accent-gold"></i>
+          </div>
+          <h4 class="fw-bold text-primary-deep mb-3"><%= t('features.f3Title') %></h4>
+          <p class="text-muted fs-6 lh-base mb-0"><%= t('features.f3Desc') %></p>
+        </div>
+      </div>
+
+      <!-- Feature 4: Qibla Compass -->
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card h-100 p-4 rounded-4 bg-white border border-light-subtle shadow-sm hover-elevate transition-all">
+          <div class="feature-icon-box bg-ivory text-primary rounded-3 mb-4 d-inline-flex align-items-center justify-content-center">
+            <i class="bi bi-compass-fill fs-3 text-accent-gold"></i>
+          </div>
+          <h4 class="fw-bold text-primary-deep mb-3"><%= t('features.f4Title') %></h4>
+          <p class="text-muted fs-6 lh-base mb-0"><%= t('features.f4Desc') %></p>
+        </div>
+      </div>
+
+      <!-- Feature 5: Daily Azkar -->
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card h-100 p-4 rounded-4 bg-white border border-light-subtle shadow-sm hover-elevate transition-all">
+          <div class="feature-icon-box bg-ivory text-primary rounded-3 mb-4 d-inline-flex align-items-center justify-content-center">
+            <i class="bi bi-heart-pulse-fill fs-3 text-accent-gold"></i>
+          </div>
+          <h4 class="fw-bold text-primary-deep mb-3"><%= t('features.f5Title') %></h4>
+          <p class="text-muted fs-6 lh-base mb-0"><%= t('features.f5Desc') %></p>
+        </div>
+      </div>
+
+      <!-- Feature 6: Smart Adhan Reminders -->
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card h-100 p-4 rounded-4 bg-white border border-light-subtle shadow-sm hover-elevate transition-all">
+          <div class="feature-icon-box bg-ivory text-primary rounded-3 mb-4 d-inline-flex align-items-center justify-content-center">
+            <i class="bi bi-bell-fill fs-3 text-accent-gold"></i>
+          </div>
+          <h4 class="fw-bold text-primary-deep mb-3"><%= t('features.f6Title') %></h4>
+          <p class="text-muted fs-6 lh-base mb-0"><%= t('features.f6Desc') %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- READING & LISTENING SYNC SECTION -->
+<section id="reading" class="py-5 py-lg-7 bg-white position-relative">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <!-- Visual Reader Mockup -->
+      <div class="col-lg-6 order-2 order-lg-1">
+        <div class="reader-mockup-card p-4 rounded-5 bg-ivory border border-gold shadow-md">
+          <div class="d-flex justify-content-between align-items-center pb-3 border-bottom border-gold-20 mb-3">
+            <span class="fw-bold text-primary-deep fs-6">سورة الفاتحة (مكية - 7 آيات)</span>
+            <span class="badge bg-primary text-white rounded-pill px-3 py-1 fs-8">الجزء 1</span>
+          </div>
+
+          <!-- Quran Verses with Active Highlight -->
+          <div class="quran-verses-box py-3 font-quran text-center fs-5 lh-lg text-primary-deep">
+            <p class="mb-2">بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ ﴿١﴾</p>
+            <div class="active-verse-highlight p-3 rounded-4 my-2 border border-gold bg-gold-subtle shadow-2xs">
+              <span class="fw-bold text-primary-deep">ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ ﴿٢﴾</span>
+              <div class="fs-8 text-accent-gold fw-normal mt-1">
+                <i class="bi bi-volume-up-fill me-1"></i> تلاوة جارية • الشيخ عبد الرحمن السديس
+              </div>
+            </div>
+            <p class="mb-2 opacity-75">ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ ﴿٣﴾ مَـٰلِكِ يَوْمِ ٱلدِّينِ ﴿٤﴾</p>
+            <p class="mb-2 opacity-50">إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ﴿٥﴾</p>
+          </div>
+
+          <!-- Audio Player Bar Mockup -->
+          <div class="player-bar-mockup p-3 rounded-4 bg-primary text-white mt-3 shadow-sm">
+            <div class="d-flex justify-content-between align-items-center mb-2 fs-8">
+              <span>الشيخ عبد الرحمن السديس</span>
+              <span class="text-accent-gold">00:14 / 00:48</span>
+            </div>
+            <div class="progress mb-2" style="height: 5px;">
+              <div class="progress-bar bg-accent-gold" style="width: 30%"></div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center gap-4 pt-1">
+              <i class="bi bi-arrow-repeat text-white-50 fs-6"></i>
+              <i class="bi bi-skip-backward-fill fs-5"></i>
+              <button class="btn btn-gold btn-sm rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;">
+                <i class="bi bi-pause-fill fs-5 text-primary-deep"></i>
+              </button>
+              <i class="bi bi-skip-forward-fill fs-5"></i>
+              <i class="bi bi-speedometer2 text-white-50 fs-6"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Description -->
+      <div class="col-lg-6 order-1 order-lg-2">
+        <span class="badge bg-primary-subtle text-primary border border-primary-20 px-3 py-2 rounded-pill fs-7 fw-bold mb-3">
+          <%= t('reading.badge') %>
+        </span>
+        <h2 class="display-5 fw-extrabold text-primary-deep mb-3 section-title">
+          <%= t('reading.title') %>
+        </h2>
+        <p class="text-muted fs-5 lh-base mb-4">
+          <%= t('reading.subtitle') %>
+        </p>
+
+        <div class="d-flex flex-column gap-3">
+          <div class="d-flex gap-3">
+            <div class="check-icon-box bg-ivory text-accent-gold rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+              <i class="bi bi-check2-circle fs-4"></i>
+            </div>
+            <div>
+              <h5 class="fw-bold text-primary-deep mb-1"><%= t('reading.point1Title') %></h5>
+              <p class="text-muted fs-6 lh-base mb-0"><%= t('reading.point1Desc') %></p>
+            </div>
+          </div>
+
+          <div class="d-flex gap-3">
+            <div class="check-icon-box bg-ivory text-accent-gold rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+              <i class="bi bi-check2-circle fs-4"></i>
+            </div>
+            <div>
+              <h5 class="fw-bold text-primary-deep mb-1"><%= t('reading.point2Title') %></h5>
+              <p class="text-muted fs-6 lh-base mb-0"><%= t('reading.point2Desc') %></p>
+            </div>
+          </div>
+
+          <div class="d-flex gap-3">
+            <div class="check-icon-box bg-ivory text-accent-gold rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+              <i class="bi bi-check2-circle fs-4"></i>
+            </div>
+            <div>
+              <h5 class="fw-bold text-primary-deep mb-1"><%= t('reading.point3Title') %></h5>
+              <p class="text-muted fs-6 lh-base mb-0"><%= t('reading.point3Desc') %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFLINE EXPERIENCE SECTION -->
+<section id="offline" class="py-5 py-lg-7 bg-surface-alt">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <span class="badge bg-primary-subtle text-primary border border-primary-20 px-3 py-2 rounded-pill fs-7 fw-bold mb-3">
+          <%= t('offline.badge') %>
+        </span>
+        <h2 class="display-5 fw-extrabold text-primary-deep mb-3 section-title">
+          <%= t('offline.title') %>
+        </h2>
+        <p class="text-muted fs-5 lh-base mb-4">
+          <%= t('offline.subtitle') %>
+        </p>
+
+        <div class="row g-3">
+          <div class="col-12">
+            <div class="p-3 bg-white rounded-3 border border-light-subtle shadow-2xs d-flex align-items-center gap-3">
+              <i class="bi bi-database-check fs-2 text-accent-gold flex-shrink-0"></i>
+              <div>
+                <h6 class="fw-bold text-primary-deep mb-1"><%= t('offline.item1Title') %></h6>
+                <small class="text-muted d-block"><%= t('offline.item1Desc') %></small>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="p-3 bg-white rounded-3 border border-light-subtle shadow-2xs d-flex align-items-center gap-3">
+              <i class="bi bi-bookmark-star-fill fs-2 text-accent-gold flex-shrink-0"></i>
+              <div>
+                <h6 class="fw-bold text-primary-deep mb-1"><%= t('offline.item2Title') %></h6>
+                <small class="text-muted d-block"><%= t('offline.item2Desc') %></small>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="p-3 bg-white rounded-3 border border-light-subtle shadow-2xs d-flex align-items-center gap-3">
+              <i class="bi bi-collection-fill fs-2 text-accent-gold flex-shrink-0"></i>
+              <div>
+                <h6 class="fw-bold text-primary-deep mb-1"><%= t('offline.item3Title') %></h6>
+                <small class="text-muted d-block"><%= t('offline.item3Desc') %></small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 text-center">
+        <div class="p-5 rounded-5 bg-primary text-white position-relative overflow-hidden shadow-xl">
+          <i class="bi bi-wifi-off display-1 text-accent-gold mb-3 d-block"></i>
+          <h3 class="fw-bold mb-3 text-white">100% قراءة بدون إنترنت</h3>
+          <p class="text-white-70 fs-6 lh-base mb-4">
+            المصحف مدمج بالكامل بصيغة محلية فائقة السرعة مع الأذكار اليومية ليعمل معك في أي مكان حول العالم دون استهلاك باقة الإنترنت.
+          </p>
+          <span class="badge bg-gold-pill text-dark fw-bold px-3 py-2 fs-7">
+            مبني بقواعد بيانات SQLite محلية مؤمّنة
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LANGUAGES SECTION -->
+<section id="languages" class="py-5 py-lg-7 bg-white">
+  <div class="container text-center">
+    <div class="max-w-700 mx-auto mb-5">
+      <span class="badge bg-primary-subtle text-primary border border-primary-20 px-3 py-2 rounded-pill fs-7 fw-bold mb-3">
+        <%= t('languages.badge') %>
+      </span>
+      <h2 class="display-5 fw-extrabold text-primary-deep mb-3 section-title">
+        <%= t('languages.title') %>
+      </h2>
+      <p class="text-muted fs-5 lh-base">
+        <%= t('languages.subtitle') %>
+      </p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="p-4 rounded-4 bg-ivory border border-gold-20 shadow-2xs hover-elevate transition-all">
+          <img src="/assets/images/ar.png" alt="العربية" width="48" height="32" class="rounded-2 shadow-2xs mb-3">
+          <h6 class="fw-bold text-primary-deep mb-0"><%= t('languages.ar') %></h6>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="p-4 rounded-4 bg-ivory border border-gold-20 shadow-2xs hover-elevate transition-all">
+          <img src="/assets/images/en.png" alt="English" width="48" height="32" class="rounded-2 shadow-2xs mb-3">
+          <h6 class="fw-bold text-primary-deep mb-0"><%= t('languages.en') %></h6>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="p-4 rounded-4 bg-ivory border border-gold-20 shadow-2xs hover-elevate transition-all">
+          <img src="/assets/images/id.png" alt="Bahasa Indonesia" width="48" height="32" class="rounded-2 shadow-2xs mb-3">
+          <h6 class="fw-bold text-primary-deep mb-0"><%= t('languages.id') %></h6>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="p-4 rounded-4 bg-ivory border border-gold-20 shadow-2xs hover-elevate transition-all">
+          <img src="/assets/images/ms.png" alt="Bahasa Melayu" width="48" height="32" class="rounded-2 shadow-2xs mb-3">
+          <h6 class="fw-bold text-primary-deep mb-0"><%= t('languages.ms') %></h6>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="p-4 rounded-4 bg-ivory border border-gold-20 shadow-2xs hover-elevate transition-all">
+          <img src="/assets/images/ru.png" alt="Русский" width="48" height="32" class="rounded-2 shadow-2xs mb-3">
+          <h6 class="fw-bold text-primary-deep mb-0"><%= t('languages.ru') %></h6>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="p-4 rounded-4 bg-ivory border border-gold-20 shadow-2xs hover-elevate transition-all">
+          <img src="/assets/images/tr.png" alt="Türkçe" width="48" height="32" class="rounded-2 shadow-2xs mb-3">
+          <h6 class="fw-bold text-primary-deep mb-0"><%= t('languages.tr') %></h6>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-muted fs-7 mt-4">
+      <i class="bi bi-info-circle me-1 text-accent-gold"></i>
+      <%= t('languages.note') %>
+    </p>
+  </div>
+</section>
+
+<!-- DOWNLOAD CTA SECTION -->
+<section id="download" class="py-5 py-lg-7 bg-primary text-white position-relative overflow-hidden text-center">
+  <div class="container position-relative z-2">
+    <div class="max-w-700 mx-auto">
+      <div class="brand-emblem-large mb-4">
+        <img src="/assets/images/logo_icon.png" alt="Al Quran Academy" width="96" height="96" class="rounded-4 shadow-lg border border-gold">
+      </div>
+      <span class="badge bg-white-15 text-accent-gold border border-gold-subtle px-3 py-2 rounded-pill fs-7 fw-bold mb-3">
+        <%= t('download.badge') %>
+      </span>
+      <h2 class="display-4 fw-black text-white mb-3">
+        <%= t('download.title') %>
+      </h2>
+      <p class="lead text-white-80 mb-5 fs-5 lh-base">
+        <%= t('download.description') %>
+      </p>
+
+      <% if (config.googlePlayUrl && config.googlePlayUrl.trim() !== '') { %>
+        <a href="<%= config.googlePlayUrl %>" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-lg px-5 py-3 fw-bold d-inline-flex align-items-center gap-3 shadow-xl hover-elevate">
+          <i class="bi bi-google-play fs-2"></i>
+          <div class="text-start">
+            <small class="d-block text-dark opacity-75 fs-8 text-uppercase">GET IT ON</small>
+            <span class="fs-5 text-dark fw-extrabold"><%= t('download.btnGooglePlay') %></span>
+          </div>
+        </a>
+      <% } else { %>
+        <div class="d-inline-flex flex-column align-items-center gap-2 p-3 px-5 rounded-4 bg-white-10 border border-gold-subtle">
+          <div class="d-flex align-items-center gap-3 text-accent-gold fs-5 fw-bold">
+            <i class="bi bi-google-play fs-2"></i>
+            <span><%= t('download.btnComingSoon') %></span>
+          </div>
+          <small class="text-white-60 fs-8"><%= config.packageName %></small>
+        </div>
+      <% } %>
+
+      <p class="text-white-60 fs-7 mt-4 mb-0">
+        <%= t('download.note') %>
+      </p>
+    </div>
+  </div>
+</section>
+

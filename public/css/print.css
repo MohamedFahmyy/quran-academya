@@ -1,0 +1,62 @@
+/* Print Stylesheet */
+@media print {
+  body {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  /* Hide unnecessary interactive elements */
+  .no-print,
+  .site-navbar,
+  .site-footer,
+  .toc-card,
+  button,
+  .btn,
+  .breadcrumb {
+    display: none !important;
+  }
+
+  .col-lg-9 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  .policy-card {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  .policy-block {
+    page-break-inside: avoid;
+    margin-bottom: 24pt !important;
+  }
+
+  h1, h2, h3 {
+    color: #000000 !important;
+    page-break-after: avoid;
+  }
+
+  a {
+    color: #000000 !important;
+    text-decoration: underline;
+  }
+
+  .table {
+    border: 1px solid #CCCCCC !important;
+  }
+
+  .table th, .table td {
+    border: 1px solid #CCCCCC !important;
+  }
+
+  .badge {
+    border: 1px solid #000000 !important;
+    color: #000000 !important;
+    background: transparent !important;
+  }
+}
+

@@ -1,0 +1,28 @@
+<div class="error-page-container py-5 my-5 text-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="error-code-badge mb-3">404</div>
+        <h1 class="display-6 fw-bold text-dark-emerald mb-3">
+          <%= lang === 'ar' ? 'عذراً، الصفحة غير موجودة' : 'Oops, Page Not Found' %>
+        </h1>
+        <p class="lead text-muted mb-4">
+          <%= lang === 'ar' 
+            ? 'الصفحة التي تحاول الوصول إليها قد تكون حُذفت، أو تم تغيير رابطها، أو أنها غير متاحة حالياً.' 
+            : 'The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.' %>
+        </p>
+        <div class="d-flex justify-content-center gap-3">
+          <a href="/<%= lang %>" class="btn btn-emerald px-4 py-2">
+            <i class="bi bi-house-door me-2"></i>
+            <%= lang === 'ar' ? 'العودة للرئيسية' : 'Back to Home' %>
+          </a>
+          <a href="/<%= lang %>/privacy-policy" class="btn btn-outline-emerald px-4 py-2">
+            <i class="bi bi-shield-check me-2"></i>
+            <%= lang === 'ar' ? 'سياسة الخصوصية' : 'Privacy Policy' %>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

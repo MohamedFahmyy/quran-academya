@@ -1,0 +1,52 @@
+/* RTL Specific Overrides for Arabic Language */
+
+body.rtl-mode {
+  direction: rtl;
+  text-align: right;
+}
+
+body.rtl-mode h1,
+body.rtl-mode h2,
+body.rtl-mode h3,
+body.rtl-mode h4,
+body.rtl-mode h5,
+body.rtl-mode h6,
+body.rtl-mode .btn,
+body.rtl-mode .navbar-nav .nav-link,
+body.rtl-mode .badge-pill,
+body.rtl-mode .stat-chip {
+  font-family: 'Cairo', 'Tajawal', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Margin and Padding Swaps */
+body.rtl-mode .me-1 { margin-left: 0.25rem !important; margin-right: 0 !important; }
+body.rtl-mode .me-2 { margin-left: 0.5rem !important; margin-right: 0 !important; }
+body.rtl-mode .me-3 { margin-left: 1rem !important; margin-right: 0 !important; }
+body.rtl-mode .ms-1 { margin-right: 0.25rem !important; margin-left: 0 !important; }
+body.rtl-mode .ms-2 { margin-right: 0.5rem !important; margin-left: 0 !important; }
+body.rtl-mode .ms-3 { margin-right: 1rem !important; margin-left: 0 !important; }
+
+/* Breadcrumb Divider */
+body.rtl-mode .breadcrumb-item + .breadcrumb-item::before {
+  float: right;
+  padding-left: var(--bs-breadcrumb-item-padding-x);
+  padding-right: 0;
+}
+
+/* TOC Navigation */
+body.rtl-mode .toc-nav .nav-link:hover {
+  padding-right: 12px;
+  padding-left: 0;
+}
+
+/* Border Start on Callout */
+body.rtl-mode .border-start {
+  border-right: 4px solid var(--primary-emerald) !important;
+  border-left: none !important;
+}
+
+/* Dropdown menu alignment */
+body.rtl-mode .dropdown-menu {
+  text-align: right;
+}
+

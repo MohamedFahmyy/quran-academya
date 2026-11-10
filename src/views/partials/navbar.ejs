@@ -1,0 +1,67 @@
+<header class="site-header sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary-deep py-3 shadow-sm" aria-label="Main Navigation">
+    <div class="container">
+      <!-- Brand Logo -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="/<%= lang %>">
+        <div class="brand-logo-container">
+          <img src="/assets/images/logo_icon.png" alt="Al Quran Academy" width="42" height="42" class="brand-logo">
+        </div>
+        <div class="brand-text d-flex flex-column">
+          <span class="brand-name fw-extrabold text-white lh-1">Al Quran</span>
+          <span class="brand-sub fw-bold text-accent-gold letter-spacing-1">ACADEMY</span>
+        </div>
+      </a>
+
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler border-0 shadow-none text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-1 text-accent-gold"></i>
+      </button>
+
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-3 text-center">
+          <li class="nav-item">
+            <a class="nav-link text-white fw-semibold <%= page === 'home' ? 'active' : '' %>" href="/<%= lang %>#home">
+              <%= t('nav.home') %>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white-50 fw-semibold" href="/<%= lang %>#features">
+              <%= t('nav.features') %>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white-50 fw-semibold" href="/<%= lang %>#reading">
+              <%= t('nav.reading') %>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white-50 fw-semibold" href="/<%= lang %>#offline">
+              <%= t('nav.offline') %>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white-50 fw-semibold" href="/<%= lang %>#languages">
+              <%= t('nav.languages') %>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white-50 fw-semibold <%= page === 'privacy' ? 'active' : '' %>" href="/<%= lang %>/privacy-policy">
+              <%= t('nav.privacy') %>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Action Buttons -->
+        <div class="d-flex align-items-center justify-content-center gap-3 mt-3 mt-lg-0">
+          <%- include('./language-switcher') %>
+          <a href="/<%= lang %>#download" class="btn btn-gold btn-sm d-flex align-items-center gap-2 fw-bold shadow-sm px-3 py-2">
+            <i class="bi bi-google-play fs-6"></i>
+            <span><%= t('nav.download') %></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+

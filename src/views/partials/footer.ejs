@@ -1,0 +1,98 @@
+<footer class="site-footer bg-primary-deep text-white pt-5 pb-4 mt-auto">
+  <div class="container">
+    <div class="row g-4 justify-content-between mb-5">
+      <!-- Brand & Mission -->
+      <div class="col-lg-4 col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <img src="/assets/images/logo_icon.png" alt="Al Quran Academy" width="40" height="40" class="rounded-2">
+          <div>
+            <h5 class="fw-bold mb-0 text-white">Al Quran Academy</h5>
+            <small class="text-accent-gold fw-semibold">أكاديمية القرآن الكريم</small>
+          </div>
+        </div>
+        <p class="text-white-50 fs-6 lh-base mb-4">
+          <%= t('footer.description') %>
+        </p>
+        <div class="d-flex align-items-center gap-3">
+          <span class="badge bg-primary-subtle text-accent-gold border border-gold-subtle px-3 py-2 rounded-pill fs-7">
+            <i class="bi bi-shield-check me-1"></i> 100% Free &amp; Ad-Free
+          </span>
+          <span class="badge bg-primary-subtle text-accent-gold border border-gold-subtle px-3 py-2 rounded-pill fs-7">
+            <i class="bi bi-wifi-off me-1"></i> Offline Quran
+          </span>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-2 col-md-6 col-6">
+        <h6 class="text-accent-gold fw-bold mb-3 text-uppercase fs-7 letter-spacing-1">
+          <%= t('footer.quickLinks') %>
+        </h6>
+        <ul class="list-unstyled d-flex flex-column gap-2 fs-6">
+          <li><a href="/<%= lang %>#home" class="footer-link"><%= t('nav.home') %></a></li>
+          <li><a href="/<%= lang %>#features" class="footer-link"><%= t('nav.features') %></a></li>
+          <li><a href="/<%= lang %>#reading" class="footer-link"><%= t('nav.reading') %></a></li>
+          <li><a href="/<%= lang %>#offline" class="footer-link"><%= t('nav.offline') %></a></li>
+          <li><a href="/<%= lang %>#languages" class="footer-link"><%= t('nav.languages') %></a></li>
+          <li><a href="/<%= lang %>#download" class="footer-link"><%= t('nav.download') %></a></li>
+        </ul>
+      </div>
+
+      <!-- Legal & Policies -->
+      <div class="col-lg-3 col-md-6 col-6">
+        <h6 class="text-accent-gold fw-bold mb-3 text-uppercase fs-7 letter-spacing-1">
+          <%= t('footer.legal') %>
+        </h6>
+        <ul class="list-unstyled d-flex flex-column gap-2 fs-6">
+          <li>
+            <a href="/<%= lang %>/privacy-policy" class="footer-link d-inline-flex align-items-center gap-2">
+              <i class="bi bi-file-earmark-lock text-accent-gold"></i>
+              <%= t('nav.privacy') %>
+            </a>
+          </li>
+          <li>
+            <a href="https://api.aladhan.com" target="_blank" rel="noopener noreferrer" class="footer-link">
+              AlAdhan Astronomical API
+            </a>
+          </li>
+          <li>
+            <a href="https://tanzil.net" target="_blank" rel="noopener noreferrer" class="footer-link">
+              Tanzil Quran Project
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-lg-3 col-md-6">
+        <h6 class="text-accent-gold fw-bold mb-3 text-uppercase fs-7 letter-spacing-1">
+          <%= t('footer.contact') %>
+        </h6>
+        <p class="text-white-50 fs-6 mb-3">
+          <%= lang === 'ar' ? 'للاستفسارات والدعم الفني:' : 'For inquiries and technical support:' %>
+        </p>
+        <a href="mailto:<%= config.supportEmail %>" class="footer-email-link d-inline-flex align-items-center gap-2 text-white fw-semibold">
+          <i class="bi bi-envelope-at text-accent-gold fs-5"></i>
+          <span><%= config.supportEmail %></span>
+        </a>
+        <div class="mt-4">
+          <%- include('./language-switcher') %>
+        </div>
+      </div>
+    </div>
+
+    <hr class="border-secondary opacity-25 my-4">
+
+    <!-- Bottom Copyright -->
+    <div class="row align-items-center justify-content-between text-white-50 fs-7">
+      <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+        &copy; 2026 <%= config.appName %>. <%= t('footer.rights') %>
+      </div>
+      <div class="col-md-6 text-center text-md-end">
+        <span class="text-accent-gold-light"><%= config.packageName %></span> &bull; 
+        <a href="/<%= lang %>/privacy-policy" class="text-white-50 text-decoration-none ms-2"><%= t('nav.privacy') %></a>
+      </div>
+    </div>
+  </div>
+</footer>
+

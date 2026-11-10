@@ -1,0 +1,98 @@
+{
+  "nav": {
+    "brand": "Al Quran Academy",
+    "home": "Home",
+    "features": "Features",
+    "reading": "Recitation Experience",
+    "offline": "Offline Quran",
+    "languages": "Languages",
+    "privacy": "Privacy Policy",
+    "download": "Download App",
+    "switchLang": "العربية"
+  },
+  "hero": {
+    "badge": "100% Free & Complete Islamic Application",
+    "headline": "Your Daily Companion for Quran & Worship",
+    "description": "Experience a comprehensive Islamic companion that seamlessly brings together Holy Quran reading in authentic Uthmani script, beautiful recitations, exact astronomical prayer times, Qibla compass direction, and daily prophetic Azkar — all within an elegant, serene interface.",
+    "ctaDownload": "Download App Free",
+    "ctaFeatures": "Explore Features",
+    "statsSurahs": "114 Full Surahs",
+    "statsAyahs": "6,236 Quranic Ayahs",
+    "statsLanguages": "6 Global Languages",
+    "statsReciters": "5 Renowned Reciters"
+  },
+  "features": {
+    "badge": "Everything a Muslim Needs",
+    "title": "Thoughtfully Crafted Features for Your Worship",
+    "subtitle": "Combining essential spiritual practices and Quranic knowledge into a modern, fluid mobile interface tailored for the entire family.",
+    "f1Title": "Complete Holy Quran",
+    "f1Desc": "The entire Holy Quran across all 114 Surahs in authentic Uthmani script, fully accessible for offline reading without an internet connection.",
+    "f2Title": "Synchronized Audio Recitations",
+    "f2Desc": "Listen to world-renowned reciters with automatic real-time verse highlighting, customizable playback speed, and repeat controls.",
+    "f3Title": "Accurate Prayer Times",
+    "f3Desc": "Calculate exact daily prayer times tailored to your geographic GPS coordinates or by choosing your city from preset Islamic capitals.",
+    "f4Title": "Precise Qibla Compass",
+    "f4Desc": "Easily pinpoint the exact direction of the Holy Kaaba in Mecca utilizing your device's built-in magnetometer and compass sensors.",
+    "f5Title": "Daily Prophetic Azkar",
+    "f5Desc": "Maintain your morning and evening supplications, post-prayer dhikr, and sleep azkar with bookmarking and instant search options.",
+    "f6Title": "Smart Adhan Reminders",
+    "f6Desc": "Stay connected to your prayers with melodious Adhan calls and custom daily reminders that you explicitly configure."
+  },
+  "reading": {
+    "badge": "Interactive Reading Experience",
+    "title": "Read, Listen, and Reflect Simultaneously",
+    "subtitle": "Follow along verse by verse as the recitation plays, creating a deeply immersive and contemplative spiritual experience.",
+    "point1Title": "Precision Verse Synchronization",
+    "point1Desc": "The reading page smoothly tracks and highlights the active Ayah in elegant gold in direct harmony with the recitation audio.",
+    "point2Title": "Distinguished World-Renowned Reciters",
+    "point2Desc": "Stream recitations from Sheikh Abdul Rahman Al-Sudais, Mishary Rashid Alafasy, Maher Al-Muaiqly, Saad Al-Ghamdi, and Abdul Basit Abdul Samad.",
+    "point3Title": "Full Playback & Repeat Control",
+    "point3Desc": "Repeat individual verses for memorization (Hifz), repeat entire chapters, adjust playback speeds, and customize Arabic font sizes."
+  },
+  "offline": {
+    "badge": "Always Ready Anywhere",
+    "title": "The Holy Quran With You Wherever You Go",
+    "subtitle": "Engineered for seamless offline reading, ensuring unhindered spiritual engagement even during travel or without network coverage.",
+    "item1Title": "Complete Local Quran Database",
+    "item1Desc": "All 114 Surahs and 6,236 verses reside directly on your device, enabling complete offline reading of the sacred text.",
+    "item2Title": "Automatic Reading Bookmark",
+    "item2Desc": "The application automatically remembers your exact last read Surah and Ayah, allowing you to instantly resume your Khatmah.",
+    "item3Title": "Built-in Azkar Library",
+    "item3Desc": "All supplications, prayers, and dhikr categories are bundled locally for complete offline access anytime, anywhere."
+  },
+  "languages": {
+    "badge": "Multilingual Experience",
+    "title": "Available in 6 Global Languages",
+    "subtitle": "Al Quran Academy provides comprehensive native localization to serve Muslims worldwide.",
+    "ar": "العربية (Arabic)",
+    "en": "English",
+    "id": "Bahasa Indonesia",
+    "ms": "Bahasa Melayu",
+    "ru": "Русский (Russian)",
+    "tr": "Türkçe (Turkish)",
+    "note": "Switch your preferred application language instantly from the in-app Settings screen."
+  },
+  "download": {
+    "badge": "Available Free Today",
+    "title": "Start Your Quran Journey Today",
+    "description": "Download the Al Quran Academy mobile application now on your Android smartphone and elevate your daily worship experience.",
+    "btnGooglePlay": "Download on Google Play",
+    "btnComingSoon": "Coming Soon on Google Play",
+    "note": "Compatible with Android 7.0 (Nougat) through Android 16."
+  },
+  "footer": {
+    "description": "Al Quran Academy – A premier free Islamic application dedicated to facilitating the recitation, listening, and understanding of the Holy Quran, accurate prayer times, and authentic Azkar.",
+    "quickLinks": "Quick Links",
+    "legal": "Legal & Policies",
+    "contact": "Contact Us",
+    "rights": "All Rights Reserved."
+  },
+  "privacy": {
+    "metaTitle": "Privacy Policy | Al Quran Academy",
+    "metaDesc": "Official Privacy Policy for Al Quran Academy application and website. Learn about our strict commitment to safeguarding your privacy.",
+    "title": "Privacy Policy",
+    "lastUpdated": "Last Updated: November 2026",
+    "intro": "Al Quran Academy ('we', 'our', or 'us') is committed to protecting your privacy and ensuring transparency in all our data practices. This Privacy Policy details the technical behavior, permissions, and safeguards governing our mobile application and official website."
+  }
+}
+

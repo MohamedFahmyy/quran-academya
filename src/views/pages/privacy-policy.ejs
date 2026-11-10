@@ -1,0 +1,574 @@
+<div class="legal-hero py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/<%= lang %>"><%= t('nav.home') %></a></li>
+            <li class="breadcrumb-item active" aria-current="page"><%= t('nav.privacy') %></li>
+          </ol>
+        </nav>
+        <div class="badge-pill mb-3">
+          <i class="bi bi-shield-check me-1"></i>
+          <%= lang === 'ar' ? 'وثيقة قانونية رسمية وموثقة' : 'Official Verified Legal Document' %>
+        </div>
+        <h1 class="display-5 fw-bold text-dark-emerald mb-3">
+          <%= t('privacy.title') %>
+        </h1>
+        <p class="lead text-muted mb-3">
+          <%= t('privacy.intro') %>
+        </p>
+        <div class="d-flex flex-wrap align-items-center gap-3 text-secondary small">
+          <span><i class="bi bi-calendar-check me-1 text-gold"></i> <%= t('privacy.lastUpdated') %></span>
+          <span>&bull;</span>
+          <span><i class="bi bi-phone me-1 text-gold"></i> Package: <code>com.alquranacademy.app</code></span>
+          <span>&bull;</span>
+          <span><i class="bi bi-shield-lock me-1 text-gold"></i> <%= lang === 'ar' ? 'تطبيق خالٍ من الإعلانات 100%' : '100% Ad-Free Application' %></span>
+        </div>
+      </div>
+      <div class="col-lg-4 text-lg-end mt-4 mt-lg-0 no-print">
+        <button class="btn btn-outline-emerald" onclick="window.print()">
+          <i class="bi bi-printer me-2"></i>
+          <%= lang === 'ar' ? 'طباعة هذه الوثيقة' : 'Print This Policy' %>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="legal-content-section py-5">
+  <div class="container">
+    <div class="row g-4">
+      
+      <!-- Table of Contents Sidebar -->
+      <div class="col-lg-3 d-none d-lg-block no-print">
+        <div class="toc-card sticky-top" style="top: 100px;">
+          <h5 class="fw-bold mb-3 text-dark-emerald">
+            <i class="bi bi-list-nested me-2 text-gold"></i>
+            <%= lang === 'ar' ? 'فهرس المحتويات' : 'Table of Contents' %>
+          </h5>
+          <nav class="nav flex-column toc-nav">
+            <a class="nav-link py-1" href="#sec-intro">1. <%= lang === 'ar' ? 'مقدمة ونظرة عامة' : 'Introduction & Overview' %></a>
+            <a class="nav-link py-1" href="#sec-about">2. <%= lang === 'ar' ? 'عن التطبيق والخدمات' : 'About the Application' %></a>
+            <a class="nav-link py-1" href="#sec-permissions">3. <%= lang === 'ar' ? 'أذونات الجهاز والشفافية' : 'Device Permissions & Transparency' %></a>
+            <a class="nav-link py-1" href="#sec-location">4. <%= lang === 'ar' ? 'بيانات الموقع الجغرافي' : 'Geographic Location Data' %></a>
+            <a class="nav-link py-1" href="#sec-notifications">5. <%= lang === 'ar' ? 'إذن الإشعارات والتنبيهات' : 'Notification Permissions' %></a>
+            <a class="nav-link py-1" href="#sec-sensors">6. <%= lang === 'ar' ? 'مستشعرات الجهاز (البوصلة)' : 'Device Sensors (Compass)' %></a>
+            <a class="nav-link py-1" href="#sec-storage">7. <%= lang === 'ar' ? 'التخزين المحلي للبيانات' : 'Local Data Storage' %></a>
+            <a class="nav-link py-1" href="#sec-third-party">8. <%= lang === 'ar' ? 'خدمات الطرف الثالث المعتمدة' : 'Third-Party Services' %></a>
+            <a class="nav-link py-1" href="#sec-ad-free">9. <%= lang === 'ar' ? 'الخلو التام من الإعلانات والتتبع' : 'Ad-Free & Tracking-Free' %></a>
+            <a class="nav-link py-1" href="#sec-security">10. <%= lang === 'ar' ? 'أمان البيانات والتشفير' : 'Data Security & Encryption' %></a>
+            <a class="nav-link py-1" href="#sec-sharing">11. <%= lang === 'ar' ? 'مشاركة البيانات والإفصاح' : 'Data Sharing & Disclosure' %></a>
+            <a class="nav-link py-1" href="#sec-retention">12. <%= lang === 'ar' ? 'الاحتفاظ بالبيانات والحذف' : 'Data Retention & Deletion' %></a>
+            <a class="nav-link py-1" href="#sec-children">13. <%= lang === 'ar' ? 'خصوصية الأطفال (COPPA)' : 'Children\'s Privacy' %></a>
+            <a class="nav-link py-1" href="#sec-user-control">14. <%= lang === 'ar' ? 'خيارات المستخدم والتحكم' : 'User Choices & Controls' %></a>
+            <a class="nav-link py-1" href="#sec-external-links">15. <%= lang === 'ar' ? 'الروابط الخارجية' : 'External Links' %></a>
+            <a class="nav-link py-1" href="#sec-changes">16. <%= lang === 'ar' ? 'التعديلات على السياسة' : 'Changes to this Policy' %></a>
+            <a class="nav-link py-1" href="#sec-contact">17. <%= lang === 'ar' ? 'بيانات الاتصال والدعم' : 'Contact Information' %></a>
+            <a class="nav-link py-1" href="#sec-consent">18. <%= lang === 'ar' ? 'الموافقة والإقرار' : 'Consent & Agreement' %></a>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Main Policy Content -->
+      <div class="col-lg-9">
+        <div class="policy-card bg-white p-4 p-md-5 rounded-4 shadow-sm border">
+
+          <!-- Section 1 -->
+          <section id="sec-intro" class="policy-block mb-5">
+            <div class="section-badge mb-2">01</div>
+            <h2 class="h3 fw-bold text-dark-emerald mb-3">
+              <%= lang === 'ar' ? '1. مقدمة ونظرة عامة' : '1. Introduction & Overview' %>
+            </h2>
+            <% if (lang === 'ar') { %>
+              <p>مرحباً بك في تطبيق وموقع <strong>أكاديمية القرآن الكريم (Al Quran Academy)</strong>. نحن نلتزم التزاماً صارماً بحماية خصوصية مستخدمينا وتوفير بيئة رقمية آمنة ونقية ترافق عباداتهم اليومية بكل طمأنينة.</p>
+              <p>توضح هذه السياسة كيفية تعاملنا مع البيانات والأذونات في تطبيقنا الموجه لمنصة أندرويد (المعرف الرسمي للحزمة: <code>com.alquranacademy.app</code>) وعبر موقعنا الرسمي (<code>https://alquran-academya.online</code>). صُمم التطبيق بالأساس ليعمل بأعلى درجات الاستقلالية المحلية وبأقل قدر ممكن من الاعتماد على البيانات الشخصية.</p>
+            <% } else { %>
+              <p>Welcome to <strong>Al Quran Academy</strong> (the "Application", "Website", "we", "us", or "our"). We are deeply committed to protecting your personal privacy and providing a serene, secure digital environment that supports your daily spiritual devotions with peace of mind.</p>
+              <p>This Privacy Policy explains how we treat data, permissions, and network communications across our official Android application (Application Package ID: <code>com.alquranacademy.app</code>) and our official website (<code>https://alquran-academya.online</code>). The application has been engineered from the ground up to operate primarily offline and with minimal reliance on external or personal data.</p>
+            <% } %>
+          </section>
+
+          <!-- Section 2 -->
+          <section id="sec-about" class="policy-block mb-5">
+            <div class="section-badge mb-2">02</div>
+            <h2 class="h3 fw-bold text-dark-emerald mb-3">
+              <%= lang === 'ar' ? '2. عن التطبيق وطبيعة الخدمات' : '2. About the Application & Services' %>
+            </h2>
+            <% if (lang === 'ar') { %>
+              <p>أكاديمية القرآن الكريم هو تطبيق إسلامي شامل ومجاني 100% صُمم لخدمة عموم المسلمين حول العالم. يقدم التطبيق الوظائف التالية:</p>
+              <ul>
+                <li>قراءة القرآن الكريم كاملاً بجميع سوره الـ 114 بالرسم العثماني المعتمد بدون إنترنت.</li>
+                <li>الاستماع إلى التلاوات القرآنية العطرة المتزامنة مع نص الآيات بأصوات كبار القراء.</li>
+                <li>حساب أوقات الصلاة الفلكية الدقيقة بناءً على الموقع الجغرافي أو الاختيار اليدوي للمدينة.</li>
+                <li>تحديد اتجاه القبلة المشرفة بدقة باستخدام بوصلة الهاتف الرقمية.</li>
+                <li>مكتبة شاملة للأذكار والأدعية اليومية المأثورة مع خاصية المفضلة.</li>
+                <li>تنبيهات الأذان والتذكيرات الإيمانية.</li>
+              </ul>
+            <% } else { %>
+              <p>Al Quran Academy is a 100% free, full-featured Islamic companion application designed to serve Muslims globally. Key features include:</p>
+              <ul>
+                <li>Reading the complete Holy Quran across all 114 Surahs in authentic Uthmani script completely offline.</li>
+                <li>Listening to synchronized audio recitations with real-time Ayah highlighting by distinguished reciters.</li>
+                <li>Calculating exact astronomical daily prayer times based on geographic GPS coordinates or manual city selection.</li>
+                <li>Determining the precise Qibla direction towards the Holy Kaaba in Mecca using digital device sensors.</li>
+                <li>Accessing a comprehensive offline library of prophetic Azkar and supplications with bookmarking.</li>
+                <li>Customizable Adhan notifications and daily prayer reminders.</li>
+              </ul>
+            <% } %>
+          </section>
+
+          <!-- Section 3 -->
+          <section id="sec-permissions" class="policy-block mb-5">
+            <div class="section-badge mb-2">03</div>
+            <h2 class="h3 fw-bold text-dark-emerald mb-3">
+              <%= lang === 'ar' ? '3. أذونات الجهاز والشفافية التامة' : '3. Device Permissions & Transparency' %>
+            </h2>
+            <% if (lang === 'ar') { %>
+              <p>يطلب التطبيق أذونات محددة فقط لتقديم ميزات جوهرية يطلبها المستخدم بنفسه، ولا يتم تفعيل أي إذن إلا بموافقة صريحة من المستخدم:</p>
+              <div class="table-responsive">
+                <table class="table table-bordered align-middle">
+                  <thead class="table-light">
+                    <tr>
+                      <th>الإذن البرمجي</th>
+                      <th>الاسم والهدف</th>
+                      <th>طبيعة الإذن</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>ACCESS_FINE_LOCATION</code><br><code>ACCESS_COARSE_LOCATION</code></td>
+                      <td><strong>الوصول إلى الموقع الجغرافي:</strong> لحساب مواقيت الصلاة الفلكية بدقة وبوصلة القبلة.</td>
+                      <td><span class="badge bg-secondary">اختياري</span> (يمكن اختيار المدينة يدوياً)</td>
+                    </tr>
+                    <tr>
+                      <td><code>POST_NOTIFICATIONS</code></td>
+                      <td><strong>إرسال الإشعارات:</strong> لتنبيهات الأذان وتذكيرات الأذكار عند حلول أوقاتها.</td>
+                      <td><span class="badge bg-secondary">اختياري</span> (يمكن إيقافها في أي وقت)</td>
+                    </tr>
+                    <tr>
+                      <td><code>INTERNET</code> &amp; <code>ACCESS_NETWORK_STATE</code></td>
+                      <td><strong>الاتصال بالإنترنت:</strong> لبث ملفات التلاوة الصوتية وجلب مواقيت الصلاة المحدثة.</td>
+                      <td><span class="badge bg-primary">للبث والشبكة</span></td>
+                    </tr>
+                    <tr>
+                      <td><code>WAKE_LOCK</code> &amp; <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></td>
+                      <td><strong>استمرار تشغيل الصوت:</strong> لضمان استمرار الاستماع للقرآن عند قفل الشاشة أو في الخلفية.</td>
+                      <td><span class="badge bg-primary">لتشغيل الصوت</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            <% } else { %>
+              <p>The Application requests only strictly necessary Android system permissions to deliver features actively requested by the user. Permissions are never requested without clear user context:</p>
+              <div class="table-responsive">
+                <table class="table table-bordered align-middle">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Permission</th>
+                      <th>Purpose &amp; Rationale</th>
+                      <th>Requirement Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>ACCESS_FINE_LOCATION</code><br><code>ACCESS_COARSE_LOCATION</code></td>
+                      <td><strong>Geographic Location:</strong> To compute exact astronomical prayer times and calibrate the Qibla compass direction.</td>
+                      <td><span class="badge bg-secondary">Optional</span> (Manual city selection fully supported)</td>
+                    </tr>
+                    <tr>
+                      <td><code>POST_NOTIFICATIONS</code></td>
+                      <td><strong>Post Notifications:</strong> To deliver scheduled Adhan prayer alerts and daily Azkar reminders.</td>
+                      <td><span class="badge bg-secondary">Optional</span> (Can be toggled off at any moment)</td>
+                    </tr>
+                    <tr>
+                      <td><code>INTERNET</code> &amp; <code>ACCESS_NETWORK_STATE</code></td>
+                      <td><strong>Network Connectivity:</strong> To stream online Quranic audio recitations and query updated prayer schedules.</td>
+                      <td><span class="badge bg-primary">Functional</span> (Audio streaming &amp; prayer sync)</td>
+                    </tr>
+                    <tr>
+                      <td><code>WAKE_LOCK</code> &amp; <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></td>
+                      <td><strong>Audio Playback Continuity:</strong> To allow uninterrupted recitation playback when the screen locks or when multitasking.</td>
+                      <td><span class="badge bg-primary">Functional</span> (Audio player service)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            <% } %>
+          </section>
+
+          <!-- Section 4 -->
+          <section id="sec-location" class="policy-block mb-5">
+            <div class="section-badge mb-2">04</div>
+            <h2 class="h3 fw-bold text-dark-emerald mb-3">
+              <%= lang === 'ar' ? '4. بيانات الموقع الجغرافي وكيفية معالجتها' : '4. Geographic Location Data Handling' %>
+            </h2>
+            <div class="callout-box bg-light-ivory p-4 rounded-3 border-start border-4 border-emerald mb-3">
+              <h5 class="fw-bold text-dark-emerald mb-2">
+                <i class="bi bi-geo-alt-fill text-gold me-2"></i>
+                <%= lang === 'ar' ? 'مبدأ البيانات العابرة (Ephemeral Location Handling)' : 'Principle of Ephemeral Location Handling' %>
+              </h5>
+              <p class="mb-0">
+                <%= lang === 'ar'
+                  ? 'لا يقوم التطبيق بحفظ سجل تنقلاتك، ولا يتتبع موقعك في الخلفية دون علمك، ولا ينشئ أي ملف تعريفي لمكان إقامتك.'
+                  : 'The application does not log location history, never tracks movement in the background without user knowledge, and creates zero geographic profiles.' %>
+              </p>
+            </div>
+            <% if (lang === 'ar') { %>
+              <p><strong>الغرض:</strong> يُستخدم إذن الموقع حصراً لحساب مواقيت الصلاة الصحيحة حسب خطوط الطول والعرض لمدينتك، وتحديد الزاوية الدقيقة للقبلة نحو الكعبة المشرفة.</p>
+              <p><strong>المعالجة التقنية:</strong> عند منح الإذن، يقرأ التطبيق الإحداثيات التقريبية أو الدقيقة ويرسلها عبر اتصال آمن ومشفر (HTTPS) إلى واجهة حساب مواقيت الصلاة (AlAdhan API) لاسترجاع جدول الصلوات. لا يتم ربط هذه الإحداثيات بأي معرف للمستخدم أو للجهاز، ولا يتم تخزينها في خوادم خاصة بنا.</p>
+              <p><strong>بديل بدون أذونات:</strong> إذا رفضت منح إذن الموقع، يوفر التطبيق خياراً يدوياً كاملاً لاختيار مدينتك من قائمة العواصم والمدن الإسلامية، أو يعتمد تلقائياً على إحداثيات افتراضية دون أي حاجة للإذن.</p>
+            <% } else { %>
+              <p><strong>Purpose:</strong> Location permission is strictly utilized to compute exact local prayer schedules based on geographical latitude and longitude, and to calculate the bearing towards the Holy Kaaba in Mecca.</p>
+              <p><strong>Technical Processing:</strong> When granted, coordinates are sent via encrypted HTTPS connection to the AlAdhan calculation API to retrieve the daily prayer timetable. These coordinates are strictly ephemeral: they are never attached to any user account, advertising ID, or unique device identifier, and are never logged or stored on our servers.</p>
+              <p><strong>Zero-Permission Fallback:</strong> If you decline location access, the application functions seamlessly by allowing you to manually choose your city from a preset list of major Islamic cities, or by defaulting gracefully without prompting again.</p>
+            <% } %>
+          </section>
+
+          <!-- Section 5 -->
+          <section id="sec-notifications" class="policy-block mb-5">
+            <div class="section-badge mb-2">05</div>
+            <h2 class="h3 fw-bold text-dark-emerald mb-3">
+              <%= lang === 'ar' ? '5. إذن الإشعارات والتنبيهات' : '5. Notification Permissions' %>
+            </h2>
+            <% if (lang === 'ar') { %>
+              <p>على أجهزة أندرويد 13 (API 33) فما فوق، يطلب التطبيق إذن إرسال الإشعارات (<code>POST_NOTIFICATIONS</code>) لتنبيه المستخدم بدخول وقت الصلاة وتذكيرات الأذكار اليومية.</p>
+              <ul>
+                <li><strong>إشعارات محلية بالكامل:</strong> تُجدول جميع الإشعارات محلياً على جهازك باستخدام خدمة <code>flutter_local_notifications</code>. لا نستخدم خوادم دفع الإشعارات الخارجية (Push Notification Servers) للتتبع أو التسويق.</li>
+                <li><strong>تحكم كامل:</strong> يمكنك في أي وقت تفعيل أو تعطيل صوت الأذان أو إشعارات الصلوات من داخل إعدادات التطبيق أو من إعدادات النظام في هاتفك.</li>
+              </ul>
+            <% } else { %>
+              <p>On Android 13 (API level 33) and newer, the Application requests notification permission (<code>POST_NOTIFICATIONS</code>) exclusively to alert you when prayer times arrive and to send scheduled prophetic Azkar reminders.</p>
+              <ul>
+                <li><strong>100% Local Scheduling:</strong> All notifications are scheduled locally on the device using standard Android alarm and notification APIs. We do not operate external push notification servers for marketing or behavioral tracking.</li>
+                <li><strong>User Autonomy:</strong> You retain complete control over all alerts and can toggle individual prayer notifications or mute sounds entirely from the in-app settings or Android system settings.</li>
+              </ul>
+            <% } %>
+          </section>
+
+          <!-- Section 6 -->
+          <section id="sec-sensors" class="policy-block mb-5">
+            <div class="section-badge mb-2">06</div>
+            <h2 class="h3 fw-bold text-dark-emerald mb-3">
+              <%= lang === 'ar' ? '6. مستشعرات الجهاز (البوصلة ومقياس التسارع)' : '6. Device Sensors (Compass & Magnetometer)' %>
+            </h2>
+            <% if (lang === 'ar') { %>
+              <p>تستخدم ميزة تحديد القبلة مستشعر البوصلة الرقمية (Magnetometer) ومقياس التسارع (Accelerometer) المدمجين في هاتفك لتحديد اتجاه الشمال المغناطيسي والاتجاه الحقيقي نحو مكة المكرمة.</p>
+              <p><strong>معالجة داخلية فقط:</strong> تتم قراءة بيانات المستشعرات ومعالجتها في الذاكرة العشوائية للجهاز حصراً لحظة فتح شاشة القبلة. لا يتم تسجيل هذه البيانات ولا إرسالها عبر شبكة الإنترنت تحت أي ظرف.</p>
+            <% } else { %>
+              <p>The interactive Qibla Compass feature interfaces with your smartphone's built-in digital magnetometer and accelerometer sensors to compute orientation relative to magnetic north and calculate the azimuth heading toward the Holy Kaaba.</p>
+              <p><strong>Local Real-Time Processing:</strong> Sensor readings are processed exclusively in real time in volatile device memory while the Qibla screen is open. No sensor data is ever recorded, stored in files, or transmitted over any network.</p>
+            <% } %>
+          </section>
+
+          <!-- Section 7 -->
+          <section id="sec-storage" class="policy-block mb-5">
+            <div class="section-badge mb-2">07</div>
+            <h2 class="h3 fw-bold text-dark-emerald mb-3">
+              <%= lang === 'ar' ? '7. التخزين المحلي للبيانات على هاتفك' : '7. Local Data Storage on Device' %>
+            </h2>
+            <% if (lang === 'ar') { %>
+              <p>يقوم التطبيق بحفظ بعض التفضيلات الضرورية لتحسين تجربة استخدامك محلياً داخل جهازك باستخدام قاعدة بيانات SQLite و SharedPreferences:</p>
+              <ul>
+                <li><strong>قاعدة بيانات القرآن الكريم:</strong> تخزين نصوص السور والآيات الـ 6236 بالرسم العثماني محلياً للتمكن من القراءة بدون إنترنت.</li>
+                <li><strong>موضع القراءة الأخير (Bookmark):</strong> حفظ رقم السورة والآية التي توقفت عندها لتستأنف القراءة بسهولة.</li>
+                <li><strong>قائمة المفضلة:</strong> حفظ الآيات أو الأذكار التي تختار إضافتها لمفضلتك.</li>
+                <li><strong>إعدادات التطبيق:</strong> لغة الواجهة، القارئ المفضل، حجم الخط، وإعدادات تنبيهات الصلاة.</li>
+              </ul>
+              <p class="text-muted small"><i class="bi bi-info-circle me-1"></i> جميع هذه البيانات مخزنة في الحيز الخاص بالتطبيق داخل نظام أندرويد (App Sandboxed Storage) ولا يمكن للتطبيقات الأخرى الوصول إليها، كما أنها لا تُرفع إلى أي خادم خارجي.</p>
+            <% } else { %>
+              <p>The Application utilizes standard Android sandboxed local storage (SQLite database via <code>sqflite</code> and key-value storage via <code>shared_preferences</code>) solely to persist your local preferences:</p>
+              <ul>
+                <li><strong>Local Quran Database:</strong> Storing the complete authentic Uthmani text of 114 Surahs and 6,236 Ayahs for offline reading.</li>
+                <li><strong>Reading Bookmarks:</strong> Remembering your last read Surah and Ayah so you can seamlessly continue your reading.</li>
+                <li><strong>Favorites &amp; Tasbih Counts:</strong> Storing Ayahs or Azkar you have bookmarked, along with digital Tasbih counter tallies.</li>
+                <li><strong>User Settings:</strong> Preferred UI language, selected reciter, Arabic font size, and notification preferences.</li>
+              </ul>
+              <p class="text-muted small"><i class="bi bi-info-circle me-1"></i> All stored data remains strictly within your device's sandboxed local filesystem. It is never uploaded, synced, or backed up to external proprietary servers.</p>
+            <% } %>
+          </section>
+
+          <!-- Section 8 -->
+          <section id="sec-third-party" class="policy-block mb-5">
+            <div class="section-badge mb-2">08</div>
+            <h2 class="h3 fw-bold text-dark-emerald mb-3">
+              <%= lang === 'ar' ? '8. خدمات الطرف الثالث المعتمدة' : '8. Third-Party Services' %>
+            </h2>
+            <% if (lang === 'ar') { %>
+              <p>يتصل التطبيق بعدد محدود جداً من الخدمات الخارجية المفتوحة والموثوقة لأداء وظائفه التقنية حصراً:</p>
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead class="table-light">
+                    <tr>
+                      <th>الخدمة / النطاق</th>
+                      <th>الهدف من الاتصال</th>
+                      <th>البيانات المنقولة</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>AlAdhan API</strong><br><code>api.aladhan.com</code></td>
+                      <td>جلب حسابات مواقيت الصلاة الفلكية وزاوية القبلة الدقيقة.</td>
+                      <td>إحداثيات خط الطول والعرض وتاريخ اليوم (عبر HTTPS بدون أي هوية للمستخدم).</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Quran Audio CDNs</strong><br><code>everyayah.com</code><br><code>download.quranicaudio.com</code></td>
+                      <td>بث وتحميل المقاطع الصوتية لتلاوة الآيات بأصوات القراء المعتمدين.</td>
+                      <td>طلب ملف الصوت بالرقم (مثل <code>001001.mp3</code>) دون أي بيانات شخصية.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            <% } else { %>
+              <p>The Application establishes connections strictly with the following trusted and transparent external services to provide functional religious content:</p>
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Service / Endpoint</th>
+                      <th>Operational Purpose</th>
+                      <th>Data Transmitted</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>AlAdhan API</strong><br><code>api.aladhan.com</code></td>
+                      <td>Retrieving astronomical prayer timetables and calculated Qibla bearing.</td>
+                      <td>Latitude, longitude coordinates and date parameters via HTTPS (no user identifiers).</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Quran Audio CDNs</strong><br><code>everyayah.com</code><br><code>download.quranicaudio.com</code></td>
+                      <td>Streaming high-fidelity Quranic audio recitations for individual Ayahs.</td>
+                      <td>Standard HTTP GET requests for audio files (e.g., <code>001001.mp3</code>) with zero user information.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            <% } %>
+          </section>
+
+          <!-- Section 9 -->
+          <section id="sec-ad-free" class="policy-block mb-5">
+            <div class="section-badge mb-2">09</div>
+            <h2 class="h3 fw-bold text-dark-emerald mb-3">
+              <%= lang === 'ar' ? '9. الالتزام التام بالخلو من الإعلانات والتتبع' : '9. Ad-Free & Tracking-Free Commitment' %>
+            </h2>
+            <div class="p-4 rounded-3 border border-2 border-emerald-subtle bg-emerald-lightest mb-3">
+              <div class="d-flex align-items-center gap-3 mb-2">
+                <i class="bi bi-shield-fill-check fs-2 text-emerald"></i>
+                <h4 class="fw-bold text-dark-emerald mb-0">
+                  <%= lang === 'ar' ? 'تطبيق إسلامي نقي 100% بدون إعلانات وبدون تتبع' : '100% Pure Islamic App: Zero Ads & Zero Tracking' %>
+                </h4>
+              </div>
+              <p class="mb-0 text-secondary">
+                <%= lang === 'ar'
+                  ? 'نؤمن بأن تلاوة كتاب الله والعبادة حق مقدس يجب أن يظل نقياً وخالياً من أي تشويش تجاري أو تعقب رقمي.'
+                  : 'We firmly believe that engaging with the Holy Quran and performing spiritual worship must remain pure, tranquil, and free from commercial distractions or digital tracking.' %>
+              </p>
+            </div>
+            <% if (lang === 'ar') { %>
+              <ul>
+                <li><strong>خالٍ تماماً من حزم الإعلانات (Ad SDKs):</strong> لا يحتوي الكود المصدري للتطبيق على أي مكتبات إعلانية مثل Google AdMob أو Unity Ads أو Facebook Audience Network أو غيرها.</li>
+                <li><strong>خالٍ من حزم التتبع السلوكي:</strong> لا نقوم بدمج أدوات التتبع السلوكي أو التحليلات التجارية مثل Firebase Analytics أو Adjust أو AppsFlyer لجمع معلومات عن عادات استخدامك.</li>
+                <li><strong>لا ملفات تعريف ارتباط للتعقب (No Tracking Cookies):</strong> لا يقوم التطبيق بتتبع تصفحك خارج التطبيق ولا يشارك أي معرفات إعلانية (Advertising ID / GAID).</li>
+              </ul>
+            <% } else { %>
+              <ul>
+                <li><strong>Zero Advertising SDKs:</strong> The application codebase contains absolutely no commercial ad frameworks (no Google AdMob, no Unity Ads, no Meta Audience Network, etc.).</li>
+                <li><strong>Zero Behavioral Tracking:</strong> We do not integrate behavioral tracking or monetization telemetry libraries (no Firebase Analytics, no Adjust, no AppsFlyer) to log user actions.</li>
+                <li><strong>No Advertising Identifiers:</strong> The application neither reads nor accesses the Android Advertising ID (GAID) or any hardware serial identifiers.</li>
+              </ul>
+            <% } %>
+          </section>
+
+          <!-- Section 10 -->
+          <section id="sec-security" class="policy-block mb-5">
+            <div class="section-badge mb-2">10</div>
+            <h2 class="h3 fw-bold text-dark-emerald mb-3">
+              <%= lang === 'ar' ? '10. أمان البيانات والتشفير' : '10. Data Security & Encryption' %>
+            </h2>
+            <% if (lang === 'ar') { %>
+              <p>نتبع أفضل الممارسات الهندسية لحماية التطبيق والموقع الإلكتروني:</p>
+              <ul>
+                <li><strong>تشفير كامل أثناء النقل (TLS/HTTPS):</strong> تتم جميع الاتصالات الشبكية (سواء طلبات مواقيت الصلاة أو البث الصوتي) عبر بروتوكولات التشفير القياسية HTTPS/TLS لحمايتها من أي اعتراض.</li>
+                <li><strong>تأمين الموقع الرسمي:</strong> يتم تشغيل موقعنا الرسمي وفق ضوابط أمنية مشددة تشمل ترويسات الأمان المتقدمة (Content Security Policy, Strict-Transport-Security, X-Frame-Options) وتحديد معدل الطلبات (Rate Limiting).</li>
+                <li><strong>عزل بيانات التطبيق:</strong> تُحفظ كافة بيانات التلاوة والمفضلة في مساحة التخزين الخاصة المعزولة داخل نظام أندرويد.</li>
+              </ul>
+            <% } else { %>
+              <p>We implement rigorous technical standards to safeguard user interactions across both the mobile application and official website:</p>
+              <ul>
+                <li><strong>Encryption in Transit (HTTPS / TLS):</strong> All outbound network transmissions (prayer schedule queries and audio file fetching) strictly enforce modern TLS/HTTPS encryption protocols.</li>
+                <li><strong>Hardened Web Infrastructure:</strong> Our official website applies strict HTTP security headers (Helmet, Content Security Policy, HSTS, frame protection) alongside proactive rate limiting to prevent abuse.</li>
+                <li><strong>Local Sandboxing:</strong> Android sandbox security boundaries isolate application data from unauthorized access by other installed applications.</li>
+              </ul>
+            <% } %>
+          </section>
+
+          <!-- Section 11 -->
+          <section id="sec-sharing" class="policy-block mb-5">
+            <div class="section-badge mb-2">11</div>
+            <h2 class="h3 fw-bold text-dark-emerald mb-3">
+              <%= lang === 'ar' ? '11. مشاركة البيانات والإفصاح للغير' : '11. Data Sharing & Disclosure' %>
+            </h2>
+            <% if (lang === 'ar') { %>
+              <p><strong>نحن لا نبيع ولا نؤجر ولا نتاجر بأي بيانات شخصية لمستخدمينا تحت أي ظرف من الظروف.</strong></p>
+              <p>نظراً لأننا لا نطلب تسجيل حساب ولا نجمع بيانات شخصية قابلة للتعريف، فإنه ليس لدينا بيانات شخصية قابلة للمشاركة أو البيع لشركات الإعلانات أو الوسطاء التجاريين.</p>
+              <p>قد يتم الإفصاح فقط في حالات الامتثال الإلزامي لأحكام القانون أو الأوامر القضائية الملزمة الصادرة من السلطات المختصة وفق الإجراءات القانونية المتبعة.</p>
+            <% } else { %>
+              <p><strong>We do NOT sell, rent, trade, or monetize any user data under any circumstances.</strong></p>
+              <p>Because the Application does not mandate user accounts, logins, or identity collection, we possess no personally identifiable consumer profiles that could ever be licensed or shared with data brokers or marketing consortiums.</p>
+              <p>Disclosure would only ever occur if strictly mandated by binding legal process, enforceable court order, or applicable law following due process.</p>
+            <% } %>
+          </section>
+
+          <!-- Section 12 -->
+          <section id="sec-retention" class="policy-block mb-5">
+            <div class="section-badge mb-2">12</div>
+            <h2 class="h3 fw-bold text-dark-emerald mb-3">
+              <%= lang === 'ar' ? '12. مدة الاحتفاظ بالبيانات وحذفها' : '12. Data Retention & Deletion' %>
+            </h2>
+            <% if (lang === 'ar') { %>
+              <p>البيانات الوحيدة المحفوظة هي تفضيلاتك وعلامات قراءتك المخزنة محلياً على هاتفك. لديك السيطرة المطلقة على هذه البيانات:</p>
+              <ul>
+                <li><strong>مسح البيانات:</strong> يمكنك مسح جميع بيانات التطبيق وعلامات القراءة في أي لحظة عبر الذهاب إلى إعدادات أندرويد &gt; التطبيقات &gt; أكاديمية القرآن الكريم &gt; مسح البيانات (Clear Data).</li>
+                <li><strong>إلغاء التثبيت:</strong> يؤدي إلغاء تثبيت التطبيق من جهازك إلى الحذف التلقائي والفوري والكامل لجميع قواعد البيانات المحلية والتفضيلات دون بقاء أي أثر لها.</li>
+              </ul>
+            <% } else { %>
+              <p>The only data stored consists of your local reading bookmarks and interface preferences stored inside your smartphone. You have absolute authority over your data:</p>
+              <ul>
+                <li><strong>Clearing Storage:</strong> You can completely purge all bookmarks, favorites, and cached settings at any time via Android Settings &gt; Apps &gt; Al Quran Academy &gt; Storage &gt; Clear Storage / Clear Data.</li>
+                <li><strong>Uninstallation:</strong> Uninstalling the application from your Android device permanently and instantly deletes all local database tables, settings, and cached assets.</li>
+              </ul>
+            <% } %>
+          </section>
+
+          <!-- Section 13 -->
+          <section id="sec-children" class="policy-block mb-5">
+            <div class="section-badge mb-2">13</div>
+            <h2 class="h3 fw-bold text-dark-emerald mb-3">
+              <%= lang === 'ar' ? '13. خصوصية الأطفال والتوافق العائلي (COPPA)' : '13. Children\'s Privacy (COPPA & Family Friendly)' %>
+            </h2>
+            <% if (lang === 'ar') { %>
+              <p>تطبيق <strong>أكاديمية القرآن الكريم</strong> مصمم ليكون آمناً ومناسباً لجميع أفراد الأسرة بمختلف أعمارهم، بما في ذلك الأطفال والناشئة الراغبين في تلاوة وحفظ كتاب الله.</p>
+              <ul>
+                <li>نحن نلتزم بقانون حماية خصوصية الأطفال على الإنترنت (COPPA) واللائحة العامة لحماية البيانات (GDPR-K).</li>
+                <li>لا نقوم بجمع أي معلومات شخصية أو أسماء أو صور أو تفاصيل اتصال من أي طفل.</li>
+                <li>لا يحتوي التطبيق على غرف محادثة أو تفاعلات اجتماعية أو مشتريات داخل التطبيق قد تشكل أي خطورة على الأطفال.</li>
+              </ul>
+            <% } else { %>
+              <p><strong>Al Quran Academy</strong> is purposefully designed to be a safe, wholesome educational and spiritual environment suitable for the entire family, including children learning Quranic recitation and memorization.</p>
+              <ul>
+                <li>We comply strictly with the Children’s Online Privacy Protection Act (COPPA), General Data Protection Regulation child safety requirements (GDPR-K), and Google Play Families Policies.</li>
+                <li>We do not solicit, require, or knowingly collect any personal information from children of any age.</li>
+                <li>The application contains no public chat rooms, no social networking links, and no in-app purchases or subscriptions.</li>
+              </ul>
+            <% } %>
+          </section>
+
+          <!-- Section 14 -->
+          <section id="sec-user-control" class="policy-block mb-5">
+            <div class="section-badge mb-2">14</div>
+            <h2 class="h3 fw-bold text-dark-emerald mb-3">
+              <%= lang === 'ar' ? '14. خيارات المستخدم والتحكم الكامل' : '14. User Choices & Control' %>
+            </h2>
+            <% if (lang === 'ar') { %>
+              <p>يمنحك التطبيق حرية الاختيار والتحكم الكامل في كافة الميزات التفاعلية:</p>
+              <ul>
+                <li><strong>التحكم في الأذونات:</strong> يمكنك منح أو إلغاء أذونات الموقع والإشعارات في أي وقت عبر شاشة إعدادات التطبيق أو من إعدادات نظام أندرويد.</li>
+                <li><strong>تحديد الموقع اليدوي:</strong> يمكنك اختيار مدينتك يدوياً للحصول على مواقيت الصلاة دون الحاجة لتشغيل الـ GPS.</li>
+                <li><strong>إدارة التنبيهات:</strong> يمكنك تخصيص تنبيه كل صلاة على حدة (تشغيل/إيقاف/اختيار صوت التنبيه).</li>
+                <li><strong>لغة التطبيق:</strong> إمكانية التبديل الفوري بين 6 لغات عالمية مدعومة داخل التطبيق.</li>
+              </ul>
+            <% } else { %>
+              <p>Users maintain complete autonomy over all interactive capabilities:</p>
+              <ul>
+                <li><strong>Permission Management:</strong> You may grant, revoke, or modify location and notification permissions at any time directly through in-app settings or Android System Settings.</li>
+                <li><strong>Manual City Fallback:</strong> You can select your city manually from the built-in catalog to compute prayer times without activating GPS.</li>
+                <li><strong>Notification Customization:</strong> Configure or mute individual prayer alarms and daily reminders independently.</li>
+                <li><strong>Interface Language:</strong> Switch seamlessly between 6 supported global languages at any time.</li>
+              </ul>
+            <% } %>
+          </section>
+
+          <!-- Section 15 -->
+          <section id="sec-external-links" class="policy-block mb-5">
+            <div class="section-badge mb-2">15</div>
+            <h2 class="h3 fw-bold text-dark-emerald mb-3">
+              <%= lang === 'ar' ? '15. الروابط الخارجية' : '15. External Links' %>
+            </h2>
+            <% if (lang === 'ar') { %>
+              <p>قد يتضمن موقعنا الإلكتروني أو التطبيق روابط إلى منصات ومصادر خارجية (مثل رابط متجر Google Play، أو وثائق APIs المعتمدة). نحن لا نتحمل المسؤولية عن ممارسات الخصوصية أو محتوى تلك المواقع الخارجية، ونشجع المستخدمين على مراجعة سياسات الخصوصية الخاصة بتلك الجهات.</p>
+            <% } else { %>
+              <p>Our website or application may contain references or links to external platforms (such as the official Google Play Store listing or referenced public APIs). We are not responsible for the privacy practices, content, or policies of external third-party services, and encourage you to review their respective privacy statements.</p>
+            <% } %>
+          </section>
+
+          <!-- Section 16 -->
+          <section id="sec-changes" class="policy-block mb-5">
+            <div class="section-badge mb-2">16</div>
+            <h2 class="h3 fw-bold text-dark-emerald mb-3">
+              <%= lang === 'ar' ? '16. التعديلات على سياسة الخصوصية' : '16. Changes to this Privacy Policy' %>
+            </h2>
+            <% if (lang === 'ar') { %>
+              <p>قد نقوم بتحديث هذه السياسة من حين لآخر لتعكس أي تحديثات تقنية أو تنظيمية أو إضافات في ميزات التطبيق. عند إجراء أي تعديل جوهري، سنقوم بتحديث تاريخ "آخر تحديث" في أعلى هذه الصفحة، وسنقوم بتوفير إشعار داخل التطبيق عند الاقتضاء.</p>
+            <% } else { %>
+              <p>We may periodically update this Privacy Policy to reflect ongoing technical improvements, new app capabilities, or regulatory updates. When significant modifications occur, we will update the "Last Updated" date at the top of this document and provide appropriate notices within the Application or on this Website.</p>
+            <% } %>
+          </section>
+
+          <!-- Section 17 -->
+          <section id="sec-contact" class="policy-block mb-5">
+            <div class="section-badge mb-2">17</div>
+            <h2 class="h3 fw-bold text-dark-emerald mb-3">
+              <%= lang === 'ar' ? '17. بيانات الاتصال والدعم' : '17. Contact Information' %>
+            </h2>
+            <% if (lang === 'ar') { %>
+              <p>إذا كانت لديك أي أسئلة أو استفسارات أو ملاحظات بخصوص سياسة الخصوصية هذه أو ممارسات التطبيق، يسعدنا تواصلك معنا مباشرة عبر القنوات الرسمية التالية:</p>
+              <div class="contact-box bg-light p-4 rounded-3 border">
+                <p class="mb-2"><strong>التطبيق:</strong> أكاديمية القرآن الكريم (Al Quran Academy)</p>
+                <p class="mb-2"><strong>معرف الحزمة:</strong> <code>com.alquranacademy.app</code></p>
+                <p class="mb-2"><strong>الموقع الرسمي:</strong> <a href="https://alquran-academya.online" target="_blank" rel="noopener">https://alquran-academya.online</a></p>
+                <p class="mb-0"><strong>البريد الإلكتروني للدعم والخصوصية:</strong> <a href="mailto:support@alquran-academya.online">support@alquran-academya.online</a></p>
+              </div>
+            <% } else { %>
+              <p>If you have any questions, inquiries, or feedback regarding this Privacy Policy or our privacy practices, please contact us through our official support channels:</p>
+              <div class="contact-box bg-light p-4 rounded-3 border">
+                <p class="mb-2"><strong>Application:</strong> Al Quran Academy</p>
+                <p class="mb-2"><strong>Package ID:</strong> <code>com.alquranacademy.app</code></p>
+                <p class="mb-2"><strong>Official Website:</strong> <a href="https://alquran-academya.online" target="_blank" rel="noopener">https://alquran-academya.online</a></p>
+                <p class="mb-0"><strong>Support &amp; Privacy Email:</strong> <a href="mailto:support@alquran-academya.online">support@alquran-academya.online</a></p>
+              </div>
+            <% } %>
+          </section>
+
+          <!-- Section 18 -->
+          <section id="sec-consent" class="policy-block">
+            <div class="section-badge mb-2">18</div>
+            <h2 class="h3 fw-bold text-dark-emerald mb-3">
+              <%= lang === 'ar' ? '18. الموافقة والإقرار' : '18. Consent & Agreement' %>
+            </h2>
+            <% if (lang === 'ar') { %>
+              <p>باستخدامك لتطبيق أو موقع <strong>أكاديمية القرآن الكريم</strong>، فإنك تقر بأنك قد قرأت وفهمت بنود سياسة الخصوصية هذه وتوافق على ممارسات التعامل مع البيانات والأذونات الموضحة فيها.</p>
+              <div class="alert alert-success d-flex align-items-center mt-3 mb-0" role="alert">
+                <i class="bi bi-patch-check-fill fs-4 me-2 text-success"></i>
+                <div>
+                  وثيقة متوافقة مع إرشادات متجر Google Play وسياسات حماية البيانات العالمية لعام 2026.
+                </div>
+              </div>
+            <% } else { %>
+              <p>By downloading, installing, accessing, or using the <strong>Al Quran Academy</strong> mobile application or website, you acknowledge that you have reviewed and understood this Privacy Policy and agree to the data and permissions practices described herein.</p>
+              <div class="alert alert-success d-flex align-items-center mt-3 mb-0" role="alert">
+                <i class="bi bi-patch-check-fill fs-4 me-2 text-success"></i>
+                <div>
+                  This document is fully compliant with Google Play Developer Policy and international data protection standards for 2026.
+                </div>
+              </div>
+            <% } %>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
